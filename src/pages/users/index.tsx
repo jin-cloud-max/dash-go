@@ -1,16 +1,22 @@
 import {
   Box,
-  Divider,
+  Button,
+  Checkbox,
   Flex,
   Heading,
-  HStack,
-  VStack,
-  Button,
-  SimpleGrid
+  Icon,
+  Table,
+  Tbody,
+  Td,
+  Th,
+  Thead,
+  Tr,
+  Text
 } from "@chakra-ui/react";
-import { Input } from "../../components/Form/Input";
+import { RiAddLine, RiPencilLine } from "react-icons/ri";
 import { Header } from "../../components/Header";
-import { SideBar } from "../../components/SideBar";
+import { Pagination } from "../../components/Pagination";
+import { SideBar } from "../../components/Sidebar";
 
 export default function UserList() {
   return (
@@ -21,30 +27,122 @@ export default function UserList() {
         <SideBar />
 
         <Box flex="1" borderRadius={8} bg="gray.800" p="8">
-          <Heading size="lg" fontWeight="normal">
-            Criar usuário
-          </Heading>
+          <Flex mb="8" justify="space-between" align="center">
+            <Heading size="lg" fontWeight="normal">Usuários</Heading>
 
-          <Divider my="6" borderColor="gray.700"/>
-
-          <VStack spacing="8">
-            <SimpleGrid minChildWidth="240px" spacing="8" width="100%">
-              <Input name="name" label="Nome completo"/>
-              <Input name="email" type="email" label="E-mail"/>
-            </SimpleGrid>
-
-            <SimpleGrid minChildWidth="240px" spacing="8" width="100%">
-              <Input name="password" label="Senha"/>
-              <Input name="password_confirmation" type="password" label="Confirmar senha"/>
-            </SimpleGrid>
-          </VStack>
-
-          <Flex mt="8" justify="flex-end">
-            <HStack spacing="4">
-              <Button colorScheme="whiteAlpha">Cancelar</Button>
-              <Button colorScheme="pink">Salvar</Button>
-            </HStack>
+            <Button
+              as="a"
+              size="sm"
+              fontSize="sm"
+              colorScheme="pink"
+              leftIcon={<Icon
+                as={RiAddLine}
+                fontSize="20"
+              />}
+            >
+              Criar novo
+            </Button>
           </Flex>
+        
+          <Table colorScheme="whiteAlpha">
+            <Thead>
+              <Tr>
+                <Th px="6" color="gray.300" width="8">
+                  <Checkbox colorScheme="pink"/>
+                </Th>
+                <Th>Usuário</Th>
+                <Th>Data de cadastro</Th>
+                <Th w="8"></Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              <Tr>
+                <Td px="6">
+                  <Checkbox colorScheme="pink"/>
+                </Td>
+                <Td>
+                  <Box>
+                    <Text fontWeight="bold">Jin Bok de Oliveria</Text>
+                    <Text fontSize="sm" color="gray.300">jinoliveira74@gmail.com</Text>
+                  </Box>
+                </Td>
+                <Td>11/04/2021</Td>
+                <Td>
+                  <Button
+                    as="a"
+                    size="sm"
+                    fontSize="sm"
+                    colorScheme="purple"
+                    leftIcon={<Icon
+                      as={RiPencilLine}
+                      fontSize="16"
+
+                    />}
+                  >
+                    Editar
+                  </Button>
+                </Td>
+              </Tr>
+
+              <Tr>
+                <Td px="6">
+                  <Checkbox colorScheme="pink"/>
+                </Td>
+                <Td>
+                  <Box>
+                    <Text fontWeight="bold">Jin Bok de Oliveria</Text>
+                    <Text fontSize="sm" color="gray.300">jinoliveira74@gmail.com</Text>
+                  </Box>
+                </Td>
+                <Td>11/04/2021</Td>
+                <Td>
+                  <Button
+                    as="a"
+                    size="sm"
+                    fontSize="sm"
+                    colorScheme="purple"
+                    leftIcon={<Icon
+                      as={RiPencilLine}
+                      fontSize="16"
+
+                    />}
+                  >
+                    Editar
+                  </Button>
+                </Td>
+              </Tr>
+
+              <Tr>
+                <Td px="6">
+                  <Checkbox colorScheme="pink"/>
+                </Td>
+                <Td>
+                  <Box>
+                    <Text fontWeight="bold">Jin Bok de Oliveria</Text>
+                    <Text fontSize="sm" color="gray.300">jinoliveira74@gmail.com</Text>
+                  </Box>
+                </Td>
+                <Td>11/04/2021</Td>
+                <Td>
+                  <Button
+                    as="a"
+                    size="sm"
+                    fontSize="sm"
+                    colorScheme="purple"
+                    leftIcon={<Icon
+                      as={RiPencilLine}
+                      fontSize="16"
+
+                    />}
+                  >
+                    Editar
+                  </Button>
+                </Td>
+              </Tr>
+            </Tbody>
+          </Table>
+
+          <Pagination />
         </Box>
       </Flex>
     </Box>
