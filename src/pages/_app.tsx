@@ -5,7 +5,7 @@ import { theme } from '../styles/theme'
 import { SideBarDrawerProvider } from '../contexts/SideBarDrawerContext'
 import { makeServer } from '../services/mirage'
 
-if (process.env.NODE_EN === "development") {
+if (process.env.NODE_ENV === 'development') {
   makeServer()
 }
 
