@@ -1,9 +1,9 @@
 import { Flex, Button, Stack, } from '@chakra-ui/react'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { Input } from '../components/Form/Input'
 import * as yup from 'Yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 
+import { Input } from '../components/Form/Input'
 
 type SigInFormData = {
   email: string;
