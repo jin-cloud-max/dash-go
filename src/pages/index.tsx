@@ -62,7 +62,7 @@ export default function SignIn() {
             name="password"
             type="password"
             label="Senha"
-            error={errors.password}
+             
             {...register('password')}
           />
 
