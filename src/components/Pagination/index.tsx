@@ -43,7 +43,7 @@ export function Pagination({
       spacing="6"
     >
       <Box>
-        <strong>0</strong> - <strong>10</strong> de 100
+        <strong>0</strong> - <strong>10</strong> de {totalCountOfRegisters}
       </Box>
       <Stack direction="row" spacing="2">
 
