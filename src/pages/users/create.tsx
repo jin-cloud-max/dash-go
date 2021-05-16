@@ -18,7 +18,7 @@ import { Input } from "../../components/Form/Input";
 import { Header } from "../../components/Header";
 import { SideBar } from "../../components/Sidebar";
 import { api } from "../../services/api";
-import { queryClient } from "../../services/QueryCliente";
+import { queryClient } from "../../services/QueryClient";
 import { useRouter } from "next/router";
 
 type CreateUserFormData = {
